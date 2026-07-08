@@ -1,0 +1,52 @@
+/* tokens.css — design tokens do PHASE
+   Tema padrão: dark (studio). Alternativo: paper (claro/suíço).
+   Trocar via data-theme no <html>. Nunca hardcode hex em componente — use estas vars. */
+
+:root {
+  /* tema dark (studio) — padrão */
+  --bg: #0e0d10;
+  --surface: #18171c;
+  --surface-2: #232128;
+  --text: #ece9e2;
+  --text-soft: #b3afa4;
+  --mute: #6f6a60;
+  --signal: #ff7a1a;   /* âmbar — ação / som / ativo */
+  --accent: #86f0a6;   /* fósforo — status / vivo */
+  --line: rgba(236, 233, 226, 0.12);
+  --scope-bg: #080709;
+
+  /* tipografia — var(--font-*) injetado pelo next/font via className em <html> */
+  --font-disp: var(--font-syne, "Syne", sans-serif);
+  --font-sans: var(--font-hanken, "Hanken Grotesk", sans-serif);
+  --font-mono: var(--font-martian, "Martian Mono", monospace);
+
+  /* raio */
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+
+  /* espaçamento (rem para ritmo vertical) */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+
+  /* motion */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* tema paper (claro / suíço) */
+[data-theme="paper"] {
+  --bg: #efece3;
+  --surface: #ffffff;
+  --surface-2: #f6f3ea;
+  --text: #181611;
+  --text-soft: #4a463d;
+  --mute: #a8a293;
+  --signal: #ff4d00;
+  --accent: #2b4cff;
+  --line: rgba(24, 22, 17, 0.13);
+  --scope-bg: #181611;
+}

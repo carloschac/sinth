@@ -1,0 +1,109 @@
+/* 300vh total: CSS sticky does the pinning — no ScrollTrigger pin, no Lenis conflict */
+.section {
+  height: 300vh;
+  position: relative;
+  background-color: var(--bg); /* overridden by GSAP via inline style */
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.inner {
+  width: 100%;
+  max-width: 960px;
+  padding: 0 var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.title {
+  font-family: var(--font-disp);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.panels {
+  display: flex;
+  gap: var(--space-3);
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 600px) {
+  .panels {
+    flex-direction: column;
+  }
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border-radius: var(--r-lg);
+  border: 1px solid transparent;
+  color: var(--mute);
+  transition: color 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+  text-align: left;
+}
+
+.panel[data-active='true'] {
+  color: var(--signal);
+  border-color: rgba(255, 122, 26, 0.2);
+  background: rgba(255, 122, 26, 0.04);
+}
+
+.panelIcon {
+  margin-bottom: 4px;
+}
+
+.panelLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.panelName {
+  font-family: var(--font-disp);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: inherit;
+}
+
+.panelDesc {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.panel[data-active='true'] .panelDesc {
+  opacity: 1;
+}

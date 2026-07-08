@@ -1,0 +1,91 @@
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-3);
+}
+
+.knobGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--text-soft);
+}
+
+.knobSvg {
+  width: 68px;
+  height: 68px;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.knobSvg:active {
+  cursor: grabbing;
+}
+
+.knobBg {
+  fill: var(--surface-2);
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.track {
+  fill: none;
+  stroke: rgba(236, 233, 226, 0.1);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.active {
+  fill: none;
+  stroke: var(--signal);
+  stroke-width: 4;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 4px rgba(255, 122, 26, 0.6));
+}
+
+.pointer {
+  fill: var(--signal);
+  filter: drop-shadow(0 0 3px rgba(255, 122, 26, 0.8));
+}
+
+.delayBtn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.delayBtn:hover {
+  color: var(--text);
+  border-color: rgba(236, 233, 226, 0.3);
+}
+
+.delayOn {
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 14px rgba(134, 240, 166, 0.3);
+}

@@ -1,0 +1,12 @@
+.wrapper {
+  overflow: hidden;
+  height: 120px;
+  position: relative;
+  background: var(--scope-bg);
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

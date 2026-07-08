@@ -1,0 +1,28 @@
+.device {
+  width: 100%;
+  max-width: 560px;
+  background: linear-gradient(180deg, var(--surface) 0%, #141318 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.7),
+    0 12px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(236, 233, 226, 0.06);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-2) var(--space-1) var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mute);
+}

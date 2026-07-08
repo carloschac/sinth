@@ -1,0 +1,30 @@
+.selector {
+  display: flex;
+  gap: 4px;
+}
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.btn:hover {
+  color: var(--text);
+  border-color: rgba(236, 233, 226, 0.25);
+}
+
+.active {
+  background: var(--signal);
+  color: #0e0d10;
+  border-color: var(--signal);
+  box-shadow: 0 0 12px rgba(255, 122, 26, 0.45);
+}
